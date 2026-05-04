@@ -17,9 +17,9 @@ const AdmissionBanner = () => {
         <div className="absolute z-10 opacity-40 inset-0 bg-gradient-hero-crousel "></div>
 
         {/* decorative piece  */}
-        <div className="absolute z-10  bg-primary text-white">
+        {/* <div className="absolute z-10  bg-primary text-white">
           Admission Open
-        </div>
+        </div> */}
 
         {/* <section className="absolute flex px-8 flex-col gap-4 inset-0 items-center animate-[slideUp_0.8s_ease-out_forwards] justify-center z-10">
           <div className="text-h3 text-gray-100 text-center leading-6 italic font-bold ">

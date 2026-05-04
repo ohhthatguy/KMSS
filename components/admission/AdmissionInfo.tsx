@@ -1,6 +1,8 @@
+import AdmssionInfoSection from "./client-comp/AdmssionInfoSection";
+
 const AdmissionInfo = () => {
   return (
-    <section className="p-6 bg-surface sm:p-14">
+    <section className="p-6 bg-surface sm:p-14 flex flex-col gap-14">
       <div className="grid gap-2">
         <label className="border border-border flex items-center gap-2 rounded-md px-1 py-1 w-fit">
           <span className="inline-block w-3 h-3 rounded-full bg-accent"></span>
@@ -22,6 +24,8 @@ const AdmissionInfo = () => {
           discipline, and excellence.
         </p>
       </div>
+
+      <AdmssionInfoSection />
     </section>
   );
 };
