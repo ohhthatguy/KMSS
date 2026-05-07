@@ -6,7 +6,7 @@ const AdmissionBanner = () => {
       <div className=" h-[calc(50vh)] rounded-2xl relative w-full  overflow-hidden">
         <div className="absolute  w-full h-full shrink-0 ">
           <Image
-            src="/Feature1/students.jpg"
+            src="/Admission/students.jpg"
             alt="+2 students of KMSS"
             fill
             className="object-cover "

@@ -1,3 +1,14 @@
+import z from "zod";
+
+export const admissionSchema = z.object({
+  fullName: z.string().min(3, "Full name is required"),
+  phoneNumber: z.string().regex(/^[0-9+]{10,15}$/, "Invalid phone number"),
+  email: z.email("Invalid email address").optional(),
+  address: z.string().min(5, "Please provide a complete address"),
+  grade: z.string().min(1, "Please select a grade"),
+  message: z.string().max(500, "Message is too long").optional(),
+});
+
 export type schoolClassDataType =
   | "montessory"
   | "nursery"
@@ -16,16 +27,22 @@ export type schoolClassDataType =
 
 export type monthlyTableDataType = {
   class: schoolClassDataType;
+  fee: {
+    oneTimeFee: {
+      admissionFee: number;
+      sportsFee: number;
+      examinationFee: number;
+      computerFee: number;
+      libraryFee: number;
+    };
+    recurringFee: {
+      monthlyFee: number;
+      hostelMonthlyFee: number;
+      transportationFee: number;
+    };
+  };
 
-  monthlyFee: number;
-  admissionFee: number;
-  sportsFee: number;
-  examinationFee: number;
-  computerFee: number;
-  libraryFee: number;
-  hostelMonthly: number;
-  transportationFee: number;
-
+  imageUrl: string;
   description: string;
 };
 
