@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 const Feature1 = () => {
   return (
@@ -26,8 +27,10 @@ const Feature1 = () => {
           the development of Tikapur area as a well planned city.
         </p>
 
-        <div className="  w-full  ">
-          <button className=" primary_btn ">Know More</button>{" "}
+        <div className="   w-full  ">
+          <Link href={"/about"} className=" primary_btn w-fit">
+            Know More
+          </Link>{" "}
         </div>
       </section>
       <section className="   h-[100vh] py-8 flex flex-col justify-between gap-2">

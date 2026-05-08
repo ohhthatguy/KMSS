@@ -15,6 +15,7 @@ const AdmissionBanner = () => {
 
         {/* gradient */}
         <div className="absolute z-10 opacity-40 inset-0 bg-gradient-hero-crousel "></div>
+        {/* <div className="absolute z-10 inset-0 opacity-40 bg-[linear-gradient(to_right,#232933,#4d595e,)]"></div> */}
 
         {/* decorative piece  */}
         {/* <div className="absolute z-10  bg-primary text-white">

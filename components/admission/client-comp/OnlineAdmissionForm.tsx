@@ -29,9 +29,12 @@ const OnlineAdmissionForm = () => {
   };
 
   return (
-    <div className="flex flex-col justify-center items-center">
-      <form onSubmit={handleSubmit(onSubmit)} className="space-y-4 w-10/12 p-6">
-        <div className="flex justify-between gap-8 ">
+    <div className="xs:flex flex-col justify-center items-center ">
+      <form
+        onSubmit={handleSubmit(onSubmit)}
+        className="space-y-4 lg:w-10/12 md:p-6 mt-2 border border-border rounded-2xl"
+      >
+        <div className="flex flex-col xs:flex-row xs:justify-between gap-4 xs:gap-8 ">
           <div className="w-full">
             <label className="block mb-1">Student Name</label>
             <input
@@ -40,7 +43,9 @@ const OnlineAdmissionForm = () => {
               className="border p-2 w-full rounded"
             />
             {errors.fullName && (
-              <p className="text-red-500 text-sm">{errors.fullName.message}</p>
+              <div className="text-red-500 text-sm">
+                {errors.fullName.message}
+              </div>
             )}
           </div>
 
@@ -53,14 +58,14 @@ const OnlineAdmissionForm = () => {
               className="border p-2 w-full rounded"
             />
             {errors.phoneNumber && (
-              <p className="text-red-500 text-sm">
+              <div className="text-red-500 text-sm">
                 {errors.phoneNumber.message}
-              </p>
+              </div>
             )}
           </div>
         </div>
 
-        <div className="grid grid-cols-[0.5fr_2fr] gap-8">
+        <div className="grid xs:grid-cols-[0.5fr_2fr] gap-4 xs:gap-8">
           <div>
             <label className="block mb-1">grade</label>
             <input
@@ -70,7 +75,9 @@ const OnlineAdmissionForm = () => {
               className="border p-2 w-full rounded"
             />
             {errors.phoneNumber && (
-              <p className="text-red-500 text-sm">{errors.grade?.message}</p>
+              <div className="text-red-500 text-sm">
+                {errors.grade?.message}
+              </div>
             )}
           </div>
           <div>
@@ -82,7 +89,9 @@ const OnlineAdmissionForm = () => {
               className="border p-2 w-full rounded"
             />
             {errors.phoneNumber && (
-              <p className="text-red-500 text-sm">{errors.email?.message}</p>
+              <div className="text-red-500 text-sm">
+                {errors.email?.message}
+              </div>
             )}
           </div>
         </div>
@@ -96,7 +105,9 @@ const OnlineAdmissionForm = () => {
             className="border p-2 w-full rounded"
           />
           {errors.phoneNumber && (
-            <p className="text-red-500 text-sm">{errors.address?.message}</p>
+            <div className="text-red-500 text-sm">
+              {errors.address?.message}
+            </div>
           )}
         </div>
 
@@ -109,7 +120,9 @@ const OnlineAdmissionForm = () => {
             className="border p-2 w-full rounded"
           />
           {errors.phoneNumber && (
-            <p className="text-red-500 text-sm">{errors.message?.message}</p>
+            <div className="text-red-500 text-sm">
+              {errors.message?.message}
+            </div>
           )}
         </div>
 

@@ -71,6 +71,25 @@
 
   --breakpoint-xs: 450px;
 }
+@layer utilities {
+  /* This creates a custom utility class */
+  .scrollbar-custom::-webkit-scrollbar {
+    width: 4px; /* Very thin width */
+    height: 4px; /* Very thin height for horizontal scroll */
+  }
+
+  .scrollbar-custom::-webkit-scrollbar-track {
+    background: transparent; /* Makes the track invisible */
+  }
+
+  .scrollbar-custom::-webkit-scrollbar-thumb {
+    background: rgb(118, 71, 71); /* Use your HSL variable */
+    border-radius: 10px;
+  }
+  .scrollbar-custom::-webkit-scrollbar-thumb:hover {
+    background: red; /* Darker on hover */
+  }
+}
 :root {
   --bg-dark: hsl(0, 0%, 0%);
   --bg-surface: hsl(0, 0%, 5%);

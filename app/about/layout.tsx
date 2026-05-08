@@ -1,4 +1,4 @@
-import AdmissionBanner from "@/components/admission/AdmissionBanner";
+import AboutBanner from "@/components/about/AboutBanner";
 import FindUs from "@/components/Home/FindUs";
 export default function AdmissionLayout({
   children,
@@ -7,7 +7,7 @@ export default function AdmissionLayout({
 }) {
   return (
     <section>
-      <AdmissionBanner />
+      <AboutBanner />
 
       <main className="p-6 bg-surface sm:p-14 ">{children}</main>
       <FindUs />

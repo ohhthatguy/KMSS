@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { MdArrowRightAlt } from "react-icons/md";
 import { latestNewsData } from "./data/latestNewsData";
 import type { latestNewsType } from "./type";
@@ -19,43 +20,48 @@ const LatestNews = () => {
         </div>
 
         <div className=" w-full">
-          <div className=" flex gap-4 sm:justify-end   items-center  hover:cursor-pointer hover:text-hover-text transition-colors duration-500 text-muted-text ">
+          <Link
+            href={"/blog"}
+            className=" flex gap-4 sm:justify-end   items-center  hover:cursor-pointer hover:text-hover-text transition-colors duration-500 text-muted-text "
+          >
             Read All
             <MdArrowRightAlt size={30} className="" />
-          </div>
+          </Link>
         </div>
       </div>
 
       <div className="flex flex-wrap  gap-6  w-full ">
-        {latestNewsData.map((e: latestNewsType, index: number) => (
-          <div
-            key={index}
-            className="flex-none w-full sm:flex-1 hover:cursor-pointer sm:min-w-75  border rounded-2xl p-2 border-t-0 border-border bg-light transition-transform duration-500 hover:scale-[1.02]"
-          >
-            <div className="relative h-48 w-full">
-              <Image
-                src={e.coverImage}
-                alt={e.title}
-                fill
-                className="object-cover rounded-2xl"
-              />
+        {latestNewsData
+          .filter((ele, index) => index < 3)
+          .map((e: latestNewsType, index: number) => (
+            <div
+              key={index}
+              className="flex-none w-full sm:flex-1 hover:cursor-pointer sm:min-w-75  border rounded-2xl p-2 border-t-0 border-border bg-light transition-transform duration-500 hover:scale-[1.02]"
+            >
+              <div className="relative h-48 w-full">
+                <Image
+                  src={e.coverImage}
+                  alt={e.title}
+                  fill
+                  className="object-cover rounded-2xl"
+                />
+              </div>
+
+              <div className="p-4 flex flex-col gap-3">
+                <label className="text-2xl font-semibold line-clamp-1 leading-tight">
+                  {e.shortTitle}
+                </label>
+
+                <p className="text-2xl font-semibold line-clamp-1 leading-tight">
+                  {e.title}
+                </p>
+
+                <button className="text-sm mt-4 font-medium hover:underline self-start">
+                  Read More
+                </button>
+              </div>
             </div>
-
-            <div className="p-4 flex flex-col gap-3">
-              <label className="text-2xl font-semibold line-clamp-1 leading-tight">
-                {e.shortTitle}
-              </label>
-
-              <p className="text-2xl font-semibold line-clamp-1 leading-tight">
-                {e.title}
-              </p>
-
-              <button className="text-sm mt-4 font-medium hover:underline self-start">
-                Read More
-              </button>
-            </div>
-          </div>
-        ))}
+          ))}
       </div>
 
       <div>page 1 of 1</div>

@@ -40,23 +40,15 @@ export const HeaderNavItem: HeaderNavItemType[] = [
 
   {
     title: "Blog",
-    link: "/",
+    link: "/blog",
     classname: "",
     icon: GiConvergenceTarget,
     clicked: false,
   },
 
   {
-    title: "Contact",
-    link: "/",
-    classname: "",
-    icon: IoMdContact,
-    clicked: false,
-  },
-
-  {
     title: "About",
-    link: "/",
+    link: "/about",
     classname: "",
     icon: IoMdContact,
     clicked: false,

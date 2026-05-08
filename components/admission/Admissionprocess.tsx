@@ -1,6 +1,5 @@
 import Link from "next/link";
 import { CiLink } from "react-icons/ci";
-import { FiMapPin } from "react-icons/fi";
 
 const Admissionprocess = () => {
   return (
@@ -15,7 +14,7 @@ const Admissionprocess = () => {
       <h3 className="leading-tight">Two ways of Admisson in KMSS</h3>
 
       <div className="grid sm:grid-cols-2 gap-4">
-        <div className="border border-border bg-light p-8 rounded-2xl">
+        <div className="border border-border bg-light p-4 sm:p-8 rounded-2xl">
           <h4 className="leading-tight">Apply Admission Online</h4>
 
           <p className="leading-tight text-gray-300 mt-4">
@@ -28,16 +27,16 @@ const Admissionprocess = () => {
             </label>
           </p>
 
-          <div className="  w-full  mt-4">
-            <Link
-              href="/admission/online-admission"
-              className="primary_btn text-lg"
-            >
-              <CiLink /> proceed
-            </Link>
-          </div>
+          {/* <div className="  "> */}
+          <Link
+            href="/admission/online-admission"
+            className="primary_btn text-lg w-fit mt-4"
+          >
+            <CiLink /> proceed
+          </Link>
+          {/* </div> */}
         </div>
-        <div className="border border-border bg-light p-8 rounded-2xl">
+        <div className="border border-border bg-light p-4 sm:p-8 rounded-2xl">
           <h4 className="leading-tight">Direct School Visit</h4>
 
           <p className="leading-tight text-gray-300 mt-4">
@@ -49,12 +48,6 @@ const Admissionprocess = () => {
               consultation and school visits before enrollment.{" "}
             </label>
           </p>
-
-          <div className="  w-full  mt-4">
-            <button className=" primary_btn text-lg">
-              <FiMapPin /> visit
-            </button>{" "}
-          </div>
         </div>
       </div>
     </div>
