@@ -4,16 +4,19 @@ import Feature2 from "@/components/Home/Feature2";
 import FeatureStrip from "@/components/Home/FeatureStrip";
 import FindUs from "@/components/Home/FindUs";
 import LatestNews from "@/components/Home/LatestNews";
+import BasicAnimationProvider from "@/provider/animation/BasicAnimationProvider";
 
 export default function Home() {
   return (
     <main className="">
-      <HeroCarosel />
-      <Feature1 />
-      <FeatureStrip />
-      <Feature2 />
-      <LatestNews />
-      <FindUs />
+      <BasicAnimationProvider>
+        <HeroCarosel />
+        <Feature1 />
+        <FeatureStrip />
+        <Feature2 />
+        <LatestNews />
+        <FindUs />
+      </BasicAnimationProvider>
     </main>
   );
 }

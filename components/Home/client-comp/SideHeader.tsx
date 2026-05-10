@@ -23,7 +23,7 @@ const SideHeader = () => {
       </div>
 
       <ul
-        className={`${isOpenSideHeader ? "block" : "hidden"} bg-neutral-imp2 mt-7 h-[calc(100vh-5.5rem)] flex flex-col list-none   gap-8  w-full absolute`}
+        className={`${isOpenSideHeader ? "block" : "hidden"}  bg-surface mt-7 h-[calc(100vh-5.5rem)] flex flex-col list-none   gap-8  w-full absolute`}
       >
         {HeaderNavItem.map((e: HeaderNavItemType, index: number) => {
           const Icon = e.icon;
@@ -32,7 +32,11 @@ const SideHeader = () => {
               key={index}
               className={` p-2 ${e.clicked && "bg-neutral-imp1"}`}
             >
-              <Link className="link flex items-center gap-2" href={e.link}>
+              <Link
+                onClick={() => setIsOpenSideHeader(false)}
+                className="link flex items-center gap-2"
+                href={e.link}
+              >
                 <Icon />
                 {e.title}
               </Link>

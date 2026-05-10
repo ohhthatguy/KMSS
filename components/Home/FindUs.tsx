@@ -1,3 +1,4 @@
+import BlogListAnimationProvider from "@/provider/animation/BlogListAnimationProvider";
 import { findUsData } from "./data/findUsData";
 import type { findusDatatype } from "./type";
 const FindUs = () => {
@@ -22,7 +23,8 @@ const FindUs = () => {
             campus to experience our community firsthand.
           </p>
 
-          <div className="grid  grid-cols-2 grid-rows-2 gap-4 ">
+          {/* <div className="grid  grid-cols-2 grid-rows-2 gap-4 "> */}
+          <BlogListAnimationProvider animationOptionData="findUs">
             {findUsData.map((e: findusDatatype, index: number) => {
               const Icon = e.icon;
               return (
@@ -42,7 +44,8 @@ const FindUs = () => {
                 </div>
               );
             })}
-          </div>
+          </BlogListAnimationProvider>
+          {/* </div> */}
         </div>
 
         <div className=" flex justify-center items-center">

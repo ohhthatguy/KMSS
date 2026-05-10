@@ -1,3 +1,4 @@
+import NumberCountingAnimation from "./client-comp/NumberCountingAnimation";
 import { FeatureStripData } from "./data/featureStripData";
 import type { FeatureStripDataType } from "./type";
 
@@ -18,9 +19,7 @@ const FeatureStrip = () => {
             <div className="leading-tight ">
               <p className="">{e.title}</p>
 
-              <label className="font-bold  w-full inline-block text-right">
-                {e.amount} +
-              </label>
+              <NumberCountingAnimation number={e.amount} />
             </div>
           </div>
         );

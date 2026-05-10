@@ -17,3 +17,11 @@ export type managementDataType = {
   position: string;
   imgLink: string;
 };
+
+export type scholarShipDataType = {
+  title: string;
+  description: string;
+  amount: string;
+  time: string;
+  eligibility: string;
+};

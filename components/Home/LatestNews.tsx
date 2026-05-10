@@ -1,3 +1,4 @@
+import MultiplePopUpProvider from "@/provider/animation/MultiplePopUpProvider";
 import Image from "next/image";
 import Link from "next/link";
 import { MdArrowRightAlt } from "react-icons/md";
@@ -30,14 +31,18 @@ const LatestNews = () => {
         </div>
       </div>
 
-      <div className="flex flex-wrap  gap-6  w-full ">
+      <MultiplePopUpProvider>
         {latestNewsData
           .filter((ele, index) => index < 3)
           .map((e: latestNewsType, index: number) => (
             <div
               key={index}
-              className="flex-none w-full sm:flex-1 hover:cursor-pointer sm:min-w-75  border rounded-2xl p-2 border-t-0 border-border bg-light transition-transform duration-500 hover:scale-[1.02]"
+              className="flex-none w-full sm:flex-1 hover:cursor-pointer sm:min-w-75  border rounded-2xl p-2 border-t-0 transition-transform duration-500 border-border bg-light  hover:scale-[1.02]"
             >
+              {/* <div
+              key={index}
+              className="flex-none w-full sm:flex-1 hover:cursor-pointer sm:min-w-75  border rounded-2xl p-2 border-t-0 border-border bg-light transition-transform duration-500 hover:scale-[1.02]"
+            > */}
               <div className="relative h-48 w-full">
                 <Image
                   src={e.coverImage}
@@ -62,7 +67,7 @@ const LatestNews = () => {
               </div>
             </div>
           ))}
-      </div>
+      </MultiplePopUpProvider>
 
       <div>page 1 of 1</div>
     </section>

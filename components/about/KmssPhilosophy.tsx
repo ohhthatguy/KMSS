@@ -3,10 +3,10 @@ import type { objectiveDataType } from "./type";
 
 const KmssPhilosophy = () => {
   return (
-    <section className="grid gap-14">
-      <div className="grid gap-8 bg-dark  p-4">
+    <section className="  grid gap-14">
+      <div className="grid  gap-8 bg-dark rounded-2xl p-4">
         <div className="">
-          <h4 className=" font-semibold">Our Philosophy</h4>
+          <h4 className="  font-semibold">Our Philosophy</h4>
           <label className="italic  text-muted-text">
             &quot; Guiding Students Toward Purposeful Lives &quot;
           </label>
@@ -19,10 +19,10 @@ const KmssPhilosophy = () => {
         </p>
       </div>
 
-      <div className="grid bg-dark rounded-2xl ">
+      <div className="grid bg-dark  rounded-2xl ">
         <h4 className="  font-semibold p-4 ">Our Objectives</h4>
 
-        <div className="py-3  sm:py-4 flex justify-around  items-center gap-2 sm:gap-8 flex-wrap">
+        <div className="py-3   sm:py-4 flex justify-around  items-center gap-2 sm:gap-8 flex-wrap">
           {objectiveData.map((e: objectiveDataType, index: number) => {
             const Icon = e.icon;
             return (

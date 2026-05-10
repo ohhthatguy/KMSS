@@ -1,15 +1,17 @@
+import BlogListAnimationProvider from "@/provider/animation/BlogListAnimationProvider";
 import Image from "next/image";
 import Link from "next/link";
 import { latestNewsType } from "../Home/type";
 
 const BlogList = ({ latestNewsData }: { latestNewsData: latestNewsType[] }) => {
   return (
-    <div className=" grid grid-cols-1 xs:grid-cols-2 gap-4 ">
+    <BlogListAnimationProvider>
+      {" "}
       {latestNewsData.map((e: latestNewsType, index: number) => {
         return (
           <div
             key={index}
-            className={` hover:cursor-pointer border rounded-2xl p-2 border-t-0 border-border bg-light transition-transform duration-500 hover:scale-[1.02] `}
+            className={` hover:cursor-pointer border rounded-2xl p-2 border-t-0 border-border bg-light hover:scale-[1.02] `}
           >
             <div className="relative h-48 w-full">
               <Image
@@ -39,7 +41,7 @@ const BlogList = ({ latestNewsData }: { latestNewsData: latestNewsType[] }) => {
           </div>
         );
       })}
-    </div>
+    </BlogListAnimationProvider>
   );
 };
 
